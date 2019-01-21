@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 class temp_10min(models.Model):
 
-    sensor_id = models.models.IntegerField()
+    sensor_id = models.IntegerField()
     date_time = models.DateTimeField(auto_now_add=True)
     temperature = models.FloatField()
 
@@ -12,7 +12,7 @@ class temp_10min(models.Model):
 
 class temp_max_min(models.Model):
 
-    sensor_id = models.models.IntegerField()
+    sensor_id = models.IntegerField()
     date = models.DateField()
     max = models.IntegerField()
     max_time = models.TimeField()
