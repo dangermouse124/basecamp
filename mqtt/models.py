@@ -1,4 +1,6 @@
 from django.db import models
+from django.utils.timezone import localtime
+
 
 # Create your models here.
 class temp_10min(models.Model):
@@ -8,7 +10,8 @@ class temp_10min(models.Model):
     temperature = models.FloatField()
 
     def __str__(self):
-        return str(self.temperature) + " DegC at " + str(self.date_time)
+        formatedDate = (localtime(self.date_time)).strftime("%H:%M %d-%b-%Y")
+        return str(self.temperature) + " DegC at " + str(formatedDate)
 
 class temp_max_min(models.Model):
 
@@ -20,5 +23,6 @@ class temp_max_min(models.Model):
     min_time = models.TimeField()
 
     def __str__(self):
-        return str(self.sensor_id)
+        formatedDate = (self.date).strftime("%d-%b-%Y")
+        return str(formatedDate)
 
