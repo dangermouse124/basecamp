@@ -8,7 +8,7 @@ class temp_10min(models.Model):
     temperature = models.FloatField()
 
     def __str__(self):
-        return self.Sensor_id
+        return str(self.temperature) + " DegC at " + str(self.date_time)
 
 class temp_max_min(models.Model):
 
@@ -20,5 +20,5 @@ class temp_max_min(models.Model):
     min_time = models.TimeField()
 
     def __str__(self):
-        return self.sensor_id
+        return str(self.sensor_id)
 
