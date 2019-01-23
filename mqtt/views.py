@@ -10,13 +10,13 @@ from . models import temp_10min
 
 # Create your views here.
 #@login_required(login_url=reverse_lazy('login'))
-"""
+
 def index(request):
     #return HttpResponse("<h1>Basecamp Homepage</h1>")
-    return render (request, 'mqtt/mqtt.html')
+    return render (request, 'base.html')
 
-"""
-def index(request):
+@login_required(login_url=reverse_lazy('login'))
+def tenMin(request):
     #pagename = '/' + pagename
     context = {
         'maxmin_list':temp_max_min.objects.all,
