@@ -3,4 +3,23 @@
 {% block content %}
 <h1>Welcome!</h1>
     <p>This is the MQTT template</p>
+    <h2>Carport daily max and min</h2>
+    {% for temp in maxmin_list %}
+    <li>
+        {{ temp.date|date:'D d F Y'}}
+        daily max: {{ temp.max }}
+        daily min: {{ temp.min }}
+
+    </li>
+    {% endfor %}
+
+    <h2>Ten minute temps</h2>
+    {% for temp in tenmin_list %}
+    <li>
+        {{ temp.date_time }}
+        temp:{{ temp.temperature }}
+    </li>
+    {% endfor %}
+
+
 {% endblock content %}

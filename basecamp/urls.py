@@ -20,7 +20,7 @@ from mqtt.views import Register
 
 urlpatterns = [
     path('register/success/', TemplateView.as_view(template_name="registration/success.html"), name='register-success'),
-    path('resiter/', Register.as_view(), name='register'),
+    path('regsiter/', Register.as_view(), name='register'),
     path('admin/', admin.site.urls),
     path('', include('django.contrib.auth.urls')),
     path('', include('mqtt.urls')),
