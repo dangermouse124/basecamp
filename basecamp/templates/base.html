@@ -12,9 +12,11 @@
         <div id="logo"><img src="{% static 'logo.jpg' %}" alt=""/></div>
             <span style="float: right;">
                 {% if user.is_authenticated %}
-                    Hello, {{ user.username}}. <a href="{% url 'logout' %}?next=/">Log out</a>.
+                    Hi {{ user.username }}!
+                    <p><a href="{% url 'logout' %}">logout</a></p>
                 {% else %}
-                    Not logged in. <a href="{% url 'login' %}?next=/">Log in</a>.
+                    <p>You are not logged in</p>
+                    <a href="{% url 'login' %}">login</a>
                 {% endif %}
             </span>
         <div id="topbanner"><img src="{% static 'banner.jpg' %}" width="800" height="300" alt=""/></div>

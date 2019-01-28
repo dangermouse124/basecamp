@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}Quote Login{% endblock title %}
+{% block title %}Login{% endblock title %}
 
 {% block sidenav %}
     <li><a href="/">Home</a></li>    
@@ -18,8 +18,6 @@
         <td><input type="submit" value="login"></td>
     </tr>
 </table>
-<!--<p>Not registered yet? <a href="{% url 'register' %}">Register here</a>.</p>-->
-<input type="hidden" name="next" value="{{ next }}" />
 {% csrf_token %}
 </form>
 
