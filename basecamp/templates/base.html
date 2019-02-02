@@ -23,9 +23,10 @@
     </header>
     <aside id="leftsidebar">
         <nav id="nav">
-            <ul><li>Menu 1</li>
-                <li>Menu 2</li>
-                <li>Menu 3</li>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="{% url 'index' %}">MQTT</a></li>
+                <li><a href="{% url 'tenMin' %}">Carport</a></li>
             </ul>
         </nav>
     </aside>

@@ -9,11 +9,10 @@ from . models import temp_10min
 
 
 # Create your views here.
-#@login_required(login_url=reverse_lazy('login'))
-
+@login_required(login_url=reverse_lazy('login'))
 def index(request):
     #return HttpResponse("<h1>Basecamp Homepage</h1>")
-    return render (request, 'base.html')
+    return render (request, 'mqtt/mqttbase.html')
 
 @login_required(login_url=reverse_lazy('login'))
 def tenMin(request):
@@ -23,6 +22,6 @@ def tenMin(request):
         'tenmin_list':temp_10min.objects.all,
     }
     #assert False
-    return render (request, 'mqtt/mqtt.html', context)
+    return render (request, 'mqtt/carport.html', context)
 
 

@@ -22,8 +22,9 @@ urlpatterns = [
     #path('register/success/', TemplateView.as_view(template_name="registration/success.html"), name='register-success'),
     #path('regsiter/', Register.as_view(), name='register'),
     path('admin/', admin.site.urls),
-    path('', include('django.contrib.auth.urls')),
+    path('login/', TemplateView.as_view(template_name="registration/login.html"), name='login'),
+    path('logout/', include('django.contrib.auth.urls')),
     path('', TemplateView.as_view(template_name='home.html'), name='home'),
     path('mqtt/', include('mqtt.urls')),
-    path('login/', TemplateView.as_view(template_name="registration/login.html"), name='login'),
+    
 ]
