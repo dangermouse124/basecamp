@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>some doc</title>
+<title>base</title>
 <link href="{% static 'main.css' %}" rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -26,6 +26,7 @@
             <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="{% url 'index' %}">MQTT</a></li>
+                <li><a href="{% url 'shed' %}">Shed</a></li>
                 <li><a href="{% url 'tenMin' %}">Carport</a></li>
             </ul>
         </nav>

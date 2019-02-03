@@ -15,6 +15,12 @@ def index(request):
     return render (request, 'mqtt/mqttbase.html')
 
 @login_required(login_url=reverse_lazy('login'))
+def shed(request):
+    #return HttpResponse("<h1>Basecamp Homepage</h1>")
+    return render (request, 'mqtt/web_gpio.html')
+
+
+@login_required(login_url=reverse_lazy('login'))
 def tenMin(request):
     #pagename = '/' + pagename
     context = {
