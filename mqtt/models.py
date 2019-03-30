@@ -26,3 +26,10 @@ class temp_max_min(models.Model):
         formatedDate = (self.date).strftime("%d-%b-%Y")
         return str(formatedDate)
 
+class door_status(models.Model):
+    Timestamp = models.DateTimeField(auto_now_add=True)
+    Status = models.CharField(max_length=50)
+
+    def __str__(self):
+        formatedDate = (self.Timestamp).strftime("%H:%M:%S %d-%b-%Y")
+        return str(self.Status) + " at " + str(formatedDate)
